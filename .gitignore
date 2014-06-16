@@ -1,0 +1,8 @@
+# .gitignore
+#
+# This file is a list of files that git should never track.
+# Kinds of files that git should ignore include log files and project dependencies.
+# You can include single file names, or folder names. You can also use the wildcard (*) to match multiple targets
+
+node_modules
+*.log

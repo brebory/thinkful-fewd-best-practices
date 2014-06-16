@@ -1,0 +1,16 @@
+{
+  "//": "This is a package.json file. It provides lots of project configuration information for npm, a command line tool",
+  "//": "used by front-end developers to manage their projects and share code. npm stands for 'npm is not an acronym' (don't ask), but",
+  "//": "it's also known as the Node Package Manager.",
+  "name": "thinkful-fewd-best-practices",
+  "version": "0.1.0",
+  "author": "Brendon Roberto <broberto@thinkful.com> (http://brendonroberto.com)",
+  "contributers": [],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-sass": "~0.7.3"
+  }
+}

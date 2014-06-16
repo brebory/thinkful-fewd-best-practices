@@ -1,0 +1,135 @@
+<!doctype html>
+
+<!-- HTML5 Boilerplate:
+
+This html structure comes from a template known as HTML5 Boilerplate. It's a great starting point for most projects,
+because it handles a lot of minutiae that can be easy to forget about. It also is the product of the combined knowledge
+of some of the best front-end developers in the industry. Basically, always use HTML5 Boilerplate as your starting point.
+
+http://html5boilerplate.com/
+-->
+
+<html class="no-js" lang="en">
+    <head>
+        <!-- Charset:
+
+        The charset tells the browser which character set to use to parse the following HTML file. There are many different character sets
+        that exist, so it's important to specify which one you wrote the code using. In general, utf-8 is used, becuase it includes characters
+        from tons of different languages and is really flexible.
+        -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Front-End Best Practices</title>
+        <meta name="description" content="Front-End Best Practices Guide by the Thinkful FEWD Mentors">
+        
+        <!-- The Viewport Meta Tag:
+
+        The viewport meta tag makes sure that your website uses the actual device resolution on all mobile devices. It's required
+        because many mobile devices actually lie to the browser about their screen resolution when viewing web pages, which will 
+        break responsive layouts. This meta tag will make sure that no longer happens.
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicons:
+
+        Favicons are used in lots of places, from app icons, to browser tabs, so it's pretty important for your websites to have them.
+
+        Read more about favicons here: http://iconhandbook.co.uk/reference/chart/favicons/
+        -->
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!-- For apple retina display devices (iPhone 4 and newer) -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+        <!-- For iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+        <!-- For older iPhones -->
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57.png" />
+
+        <!-- Normalize:
+
+        Normalize is an awesome CSS reset created by Nicolas Gallagher. It makes clears all browser-specific CSS styling, giving you a blank slate to start your styling from.
+
+        http://necolas.github.io/normalize.css/
+        -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Modernizer:
+
+        Modernizer is an extremely helpful Javascript library that both provides progressive enhancement and graceful degredation for
+        many experimental and not-cross-browser CSS properties. 
+        -->
+        <script src="js/vendor/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="introduction-container">
+  
+            <h1 class="introduction-title">Front-End Best Practices</h1>
+          
+            <p class="introduction-text">One way to become a better front-end developer is to create code that is less complicated. Managing complexity is a skill that is difficult to master, but there are a couple of principles you can start applying today that will have an immediate effect on the quality of your code.</p>
+          
+            <p class="introduction-text">This pen shows off a couple of techniques to keep your front-end code very simple and understandable. Obviously, the example ui components are extremely simple, but these principles are applicable to any number of more complicated components, such as a carousel or video player.</p>
+          
+            <ol class="introduction-list">
+            
+                <li class="introduction-list-element">Use semantic CSS classes on everything! Seriously, you have nothing to lose by adding CSS classes to every element. Even if you don't need to style a specific element right now, giving it a class can help you if you need to style it in the future.</li>
+            
+                <li class="introduction-list-element">Use separate classes for styling and javascript hooks. The visual style of an element and it's behavior are two different concerns - keep them separated from each other by using one set of CSS classes for styling, and another set for javascript interaction hooks. Use the prefix 'js-' for your javascript hook CSS classes.</li>
+            
+                <li class="introduction-list-element">Keep your markup as simple as you possibly can. Use only the elements you need, and nothing more.</li>
+                <li class="introduction-list-element">Learn SASS or LESS! They add powerful features like mixins and variables, which will help you write less code, and do more with it.</li>
+            </ol>
+        </div>
+
+        <!-- IDs vs Classes:
+
+        The decision on when to use an ID and when to use a css class is pretty easy to make - basically, always use a css class, except when you know that there will only be one element of this type on the page. Even then, you should usually use a CSS class - they're just easier to handle in terms of maintenance.
+
+        I use an ID here only because document.getElementById is faster than document.getElementsByClassNames. 
+        So, when performance is an issue, that's when you should use IDs.-->
+
+        <div id="flashes-container">
+            <div class="flash-alert-container">
+                <h1 class="flash-alert-title">Example Flash Alert</h1>
+            
+                <p class="flash-alert-message">I am an example of a simple flash alert. Click the x to dismiss me.</p>
+            
+                <div class="flash-alert-close-icon js-close-icon"></div>
+            </div>
+          
+            <div class="flash-info-container">
+                <h1 class="flash-info-title">Example Flash Info</h1>
+            
+                <p class="flash-info-message">I am an example of a simple flash info. Click the x to dismiss me. I'm also a little bit longer than the alert above me.</p>
+            
+                <div class="flash-info-close-icon js-close-icon"></div>
+            </div>
+        </div>
+
+        <button class="btn-create-flash js-create-flash">Give me another flash!</button>
+
+        <!-- CDNs:
+
+        This script tag tries to load jquery from Google's CDN. A CDN is a Content Delivery Network, and you can leverage them to serve commonly-used assets, like jQuery to your users. It's better for you to use a CDN than to host the files yourself because it saves you bandwith, and the user has a higher likelihood of having a cached version of the file from a CDN, which means your page will load a tiny bit faster.
+        -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
