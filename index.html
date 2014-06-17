@@ -119,17 +119,28 @@ http://html5boilerplate.com/
         -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+        <!-- Scripts:
+
+        Generally, you should include all of your script tags at the bottom of the the body tag. This means that they will be parsed last and load last. This is a good thing, because the browser renders HTML sequentially, so if your scripts are above certain HTML elements, the time it takes for your script to download and execute will affect how long it takes for the entire page to render. Putting scripts at the end of the body tag avoids this problem.
+        -->
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics:
+
+        Google Analytics gives you some awesome insight about your webpages for free. It's easy to install: just include this script tag and replace the tracking ID with your website's tracking ID. You should always use it.
+        -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-52020907-1', 'brebory.github.io');
+            ga('send', 'pageview');
+
         </script>
     </body>
 </html>
