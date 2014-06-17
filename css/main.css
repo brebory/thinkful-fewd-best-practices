@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+}
+
+.introduction-container {
+  margin: 1em;
+  padding: 2em;
+  width: 60%;
+  background: #ceccff;
+}
+
+.introduction-title {
+  font-family: "Fjalla One", sans-serif;
+  color: #222244;
+}
+
+.introduction-text, .introduction-list-element {
+  font-family: "Average Sans", sans-serif;
+  color: #444450;
+}
+
+.introduction-list-element {
+  margin-bottom: 1em;
+}
+
+.flash-alert-container {
+  position: relative;
+  display: inline-block;
+  margin: 1em 0 0 1em;
+  padding: 0 1em;
+  background-color: #ffd2d2;
+  border: solid 1px #ff9f9f;
+}
+
+.flash-alert-title {
+  font-family: "Fjalla One", sans-serif;
+  color: #a24555;
+}
+
+.flash-alert-message {
+  font-family: "Average Sans", sans-serif;
+  color: black;
+}
+
+.flash-alert-close-icon {
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  padding: 0.2em 0.5em;
+}
+.flash-alert-close-icon:before {
+  color: #a24555;
+  content: "x";
+}
+.flash-alert-close-icon:hover:before {
+  color: #5a272f;
+}
+
+.flash-info-container {
+  position: relative;
+  display: inline-block;
+  margin: 1em 0 0 1em;
+  padding: 0 1em;
+  background-color: #d2d2ff;
+  border: solid 1px #9f9fff;
+}
+
+.flash-info-title {
+  font-family: "Fjalla One", sans-serif;
+  color: #4545a1;
+}
+
+.flash-info-message {
+  font-family: "Average Sans", sans-serif;
+  color: black;
+}
+
+.flash-info-close-icon {
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  padding: 0.2em 0.5em;
+}
+.flash-info-close-icon:before {
+  color: #4545a1;
+  content: "x";
+}
+.flash-info-close-icon:hover:before {
+  color: #26265a;
+}
+
+.btn-create-flash {
+  padding: 1em;
+  margin: 1em;
+  background-color: #ffd2d2;
+  border: solid 1px #ff9f9f;
+  color: #a24555;
+  font-family: "Fjalla One", sans-serif;
+}
+.btn-create-flash:hover {
+  color: #5a272f;
+  background-color: #ff6c6c;
+  border: solid 1px #ff5353;
+}
