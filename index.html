@@ -79,22 +79,18 @@ http://html5boilerplate.com/
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="introduction-container">
-  
-            <h1 class="introduction-title">Front-End Best Practices</h1>
+        <div id="introduction">
+            <h1>Front-End Best Practices</h1>
           
-            <p class="introduction-text">One way to become a better front-end developer is to create code that is less complicated. Managing complexity is a skill that is difficult to master, but there are a couple of principles you can start applying today that will have an immediate effect on the quality of your code.</p>
+            <p>One way to become a better front-end developer is to create code that is less complicated. Managing complexity is a skill that is difficult to master, but there are a couple of principles you can start applying today that will have an immediate effect on the quality of your code.</p>
           
-            <p class="introduction-text">This pen shows off a couple of techniques to keep your front-end code very simple and understandable. Obviously, the example ui components are extremely simple, but these principles are applicable to any number of more complicated components, such as a carousel or video player.</p>
+            <p>This pen shows off a couple of techniques to keep your front-end code very simple and understandable. Obviously, the example ui components are extremely simple, but these principles are applicable to any number of more complicated components, such as a carousel or video player.</p>
           
-            <ol class="introduction-list">
-            
-                <li class="introduction-list-element">Use semantic CSS classes on everything! Seriously, you have nothing to lose by adding CSS classes to every element. Even if you don't need to style a specific element right now, giving it a class can help you if you need to style it in the future.</li>
-            
-                <li class="introduction-list-element">Use separate classes for styling and javascript hooks. The visual style of an element and it's behavior are two different concerns - keep them separated from each other by using one set of CSS classes for styling, and another set for javascript interaction hooks. Use the prefix 'js-' for your javascript hook CSS classes.</li>
-            
-                <li class="introduction-list-element">Keep your markup as simple as you possibly can. Use only the elements you need, and nothing more.</li>
-                <li class="introduction-list-element">Learn SASS or LESS! They add powerful features like mixins and variables, which will help you write less code, and do more with it.</li>
+            <ol>
+                <li>Use semantic CSS classes on everything! Seriously, you have nothing to lose by adding CSS classes to every element. Even if you don't need to style a specific element right now, giving it a class can help you if you need to style it in the future.</li>
+                <li>Use separate classes for styling and javascript hooks. The visual style of an element and it's behavior are two different concerns - keep them separated from each other by using one set of CSS classes for styling, and another set for javascript interaction hooks. Use the prefix 'js-' for your javascript hook CSS classes.</li>
+                <li>Keep your markup as simple as you possibly can. Use only the elements you need, and nothing more.</li>
+                <li>Learn SASS or LESS! They add powerful features like mixins and variables, which will help you write less code, and do more with it.</li>
             </ol>
         </div>
 
@@ -105,25 +101,21 @@ http://html5boilerplate.com/
         I use an ID here only because document.getElementById is faster than document.getElementsByClassNames. 
         So, when performance is an issue, that's when you should use IDs.-->
 
-        <div id="flashes-container">
-            <div class="flash-alert-container">
-                <h1 class="flash-alert-title">Example Flash Alert</h1>
-            
-                <p class="flash-alert-message">I am an example of a simple flash alert. Click the x to dismiss me.</p>
-            
-                <div class="flash-alert-close-icon js-close-icon"></div>
+        <div id="flashes">
+            <div class="flash alert">
+                <h1>Example Flash Alert</h1>
+                <p>I am an example of a simple flash alert. Click the x to dismiss me.</p>
+                <div class="close"></div>
             </div>
           
-            <div class="flash-info-container">
-                <h1 class="flash-info-title">Example Flash Info</h1>
-            
-                <p class="flash-info-message">I am an example of a simple flash info. Click the x to dismiss me. I'm also a little bit longer than the alert above me.</p>
-            
-                <div class="flash-info-close-icon js-close-icon"></div>
+            <div class="flash info">
+                <h1>Example Flash Info</h1>
+                <p>I am an example of a simple flash info. Click the x to dismiss me. I'm also a little bit longer than the alert above me.</p>
+                <div class="close"></div>
             </div>
         </div>
 
-        <button class="btn-create-flash js-create-flash">Give me another flash!</button>
+        <button class="create-flash">Give me another flash!</button>
 
         <!-- CDNs:
 
