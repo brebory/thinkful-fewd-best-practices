@@ -13,22 +13,34 @@ module.exports = function(Grunt) {
 	 */
 	Grunt.initConfig({
 		/*
-		 * Tell Grunt where to find the package.json file.
+		 * Tell grunt where to find the package.json file.
 		 * This line is optional, because grunt knows to look for package.json in the project root, but it's good to be explicit.
 		 */
 
 		pkg: Grunt.file.readJSON('package.json'),
 		/*
 		 * Configuration options for grunt-contrib-sass.
+		 *
+		 * https://github.com/gruntjs/grunt-contrib-sass/blob/master/README.md
 		 */
-		sass:
-			options: {
+		sass: {
+						options: {
 				/*
 				 * Output our CSS in exapanded form so that it's easy to read.
 				 * In a production environment, you would want to change this option to compressed, to save space.
 				 */
 				style: 'expanded'
-			}
+			},
+			files: [{
+				/*
+				 * Tells grunt where our sass files are, and where to put the converted CSS files.
+				 */
+				expand: true,
+				cwd: 'sass',
+				src: ['*.sass'],
+				dest: '../css',
+				ext: '.css'
+			}]
 		}
 	});
 
