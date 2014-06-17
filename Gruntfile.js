@@ -24,23 +24,21 @@ module.exports = function(Grunt) {
 		 * https://github.com/gruntjs/grunt-contrib-sass/blob/master/README.md
 		 */
 		sass: {
-						options: {
-				/*
-				 * Output our CSS in exapanded form so that it's easy to read.
-				 * In a production environment, you would want to change this option to compressed, to save space.
-				 */
-				style: 'expanded'
-			},
-			files: [{
-				/*
-				 * Tells grunt where our sass files are, and where to put the converted CSS files.
-				 */
-				expand: true,
-				cwd: 'sass',
-				src: ['*.sass'],
-				dest: '../css',
-				ext: '.css'
-			}]
+			dist: {
+				options: {
+					/*
+					 * Output our CSS in exapanded form so that it's easy to read.
+					 * In a production environment, you would want to change this option to compressed, to save space.
+					 */
+					style: 'expanded'
+				},
+				files: {
+					/*
+					 * Tells grunt where our sass files are, and where to put the converted CSS files.
+					 */
+					"css/main.css": "sass/main.sass"
+				}
+			}
 		}
 	});
 
