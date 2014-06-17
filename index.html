@@ -27,6 +27,10 @@ http://html5boilerplate.com/
         The viewport meta tag makes sure that your website uses the actual device resolution on all mobile devices. It's required
         because many mobile devices actually lie to the browser about their screen resolution when viewing web pages, which will 
         break responsive layouts. This meta tag will make sure that no longer happens.
+
+        However, it's important to note that you only want to use the viewport meta
+        tag if your site is fully responsive. If you're building a fixed-width site,
+        don't use this technique, because it will break the mobile layout completely.
         -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
